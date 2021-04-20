@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sga_stats_stat" resource="default" engine="innodb" comment="STATS stat">
+        <column xsi:type="int" name="stat_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="session_id" length="255" nullable="false"  comment="Session Id" />
+        <column xsi:type="varchar" name="code" length="255" nullable="false"  comment="Code" />
+        <column xsi:type="text" name="params" nullable="false"  comment="Params" />
+        <column xsi:type="smallint" name="counter" padding="5" unsigned="true" nullable="false"  comment="Counter" />
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="stat_id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sga_Stats::stats_stat" title="Stats Navigation" translate="title" module="Sga_Stats" sortOrder="10" parent="Magento_Reports::report_customers" action="stats/stat" resource="Sga_Stats::stats_stat"/>
+    </menu>
+</config>
